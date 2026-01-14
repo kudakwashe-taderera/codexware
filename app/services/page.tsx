@@ -34,7 +34,7 @@ export default function Services() {
     {
       id: 1,
       title: "API Development",
-      description: "Robust RESTful APIs with Node-based, well-documented solutions. Secure and scalable backend services.",
+      description: "Robust RESTful APIs with Python/Django and Node.js backends. Secure, well-documented, and scalable backend services.",
       icon: <FiCpu className="w-full h-full" />,
       color: "from-orange-500 to-red-500",
       accentColor: "orange-500",
@@ -89,7 +89,7 @@ export default function Services() {
     {
       id: 6,
       title: "Web Development",
-      description: "Modern, responsive web applications built with cutting-edge technologies. From landing pages to complex platforms.",
+      description: "Modern web applications with React/Next.js frontend and Python/Django backend. Full-stack solutions from landing pages to complex platforms.",
       icon: <FiGlobe className="w-full h-full" />,
       color: "from-cyan-500 to-blue-500",
       accentColor: "cyan-500",
@@ -605,10 +605,10 @@ function getServiceFeatures(serviceId: number): string[] {
   switch(serviceId) {
     case 1: // API Development
       return [
+        "Python & Django REST Framework",
         "Node.js & Express Framework",
         "REST & GraphQL API Design",
         "Authentication & Security Systems",
-        "Comprehensive API Documentation",
         "Performance & Scalability Optimization"
       ];
     case 2: // UI/UX Design
@@ -646,7 +646,7 @@ function getServiceFeatures(serviceId: number): string[] {
     case 6: // Web Development
       return [
         "React, Next.js & TypeScript",
-        "Modern Frontend Architecture",
+        "Python & Django Backend",
         "Responsive & Adaptive Design",
         "SEO Optimization & Analytics",
         "Performance Tuning & Optimization"
