@@ -134,11 +134,9 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen pt-16 relative overflow-hidden">
-      {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950" />
         
-        {/* Floating elements */}
         {Array.from({ length: 8 }).map((_, i) => (
           <motion.div
             key={i}
@@ -162,7 +160,6 @@ export default function Contact() {
           />
         ))}
         
-        {/* Grid overlay */}
         <div className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `
@@ -174,7 +171,6 @@ export default function Contact() {
         />
       </div>
 
-      {/* Hero Section */}
       <Section className="py-20 px-4 md:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -214,7 +210,6 @@ export default function Contact() {
             </motion.p>
           </motion.div>
 
-          {/* Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {contactInfo.map((info, index) => (
               <motion.div
@@ -245,11 +240,9 @@ export default function Contact() {
         </div>
       </Section>
 
-      {/* Main Contact Form */}
       <Section className="py-12 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
-            {/* Left Column - Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -318,7 +311,6 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Right Column - Form */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -327,7 +319,6 @@ export default function Contact() {
               className="lg:col-span-2"
             >
               <div className="relative">
-                {/* Form Container */}
                 <div className="relative p-8 md:p-10 rounded-3xl bg-gradient-to-b from-white/5 to-white/0 backdrop-blur-xl border border-white/10 shadow-2xl">
                   <div className="absolute -top-3 -right-3 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-30" />
                   
@@ -563,7 +554,6 @@ export default function Contact() {
         </div>
       </Section>
 
-      {/* Schedule Section */}
       <Section className="py-20 px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div

@@ -188,14 +188,12 @@ const AnimatedBackground = () => {
       size: Math.random() > 0.7 ? 'text-sm' : 'text-xs',
       startY: -20 - Math.random() * 20,
     })));
-  }, [mounted]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [mounted]);
 
   return (
     <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
-      {/* Base gradient - Dark with contrast */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-gray-950" />
       
-      {/* Grid background - VISIBLE */}
       <div className="absolute inset-0 opacity-15"
         style={{
           backgroundImage: `
@@ -206,7 +204,6 @@ const AnimatedBackground = () => {
         }}
       />
       
-      {/* Main network grid - VERY VISIBLE */}
       <svg className="absolute inset-0 w-full h-full opacity-50">
         {gridPoints.length > 0 && gridPoints.map((point, i) => {
           const rightNeighbor = gridPoints[i + 1];
@@ -214,7 +211,6 @@ const AnimatedBackground = () => {
           
           return (
             <g key={point.id}>
-              {/* Horizontal connections - PRIMARY COLOR */}
               {rightNeighbor && rightNeighbor.x < 100 && (
                 <motion.line
                   x1={`${point.x}%`}
@@ -234,7 +230,6 @@ const AnimatedBackground = () => {
                 />
               )}
               
-              {/* Vertical connections - SECONDARY COLOR */}
               {bottomNeighbor && (
                 <motion.line
                   x1={`${point.x}%`}
@@ -254,7 +249,6 @@ const AnimatedBackground = () => {
                 />
               )}
               
-              {/* Grid points - VERY VISIBLE */}
               <motion.circle
                 cx={`${point.x}%`}
                 cy={`${point.y}%`}
@@ -276,28 +270,23 @@ const AnimatedBackground = () => {
           );
         })}
         
-        {/* Tech node connections - Connect related technologies */}
         {[
-          // Frontend connections
-          [0, 1], // React ↔ Next.js
-          [0, 2], // React ↔ TypeScript
-          [1, 2], // Next.js ↔ TypeScript
-          [0, 7], // React ↔ Tailwind
+          [0, 1],
+          [0, 2],
+          [1, 2],
+          [0, 7],
           
-          // Backend connections
-          [3, 4], // Python ↔ Django
-          [4, 5], // Django ↔ PostgreSQL
-          [3, 5], // Python ↔ PostgreSQL
-          [6, 5], // Node.js ↔ PostgreSQL
+          [3, 4],
+          [4, 5],
+          [3, 5],
+          [6, 5],
           
-          // Tool connections
-          [8, 0], // Framer ↔ React
-          [9, 3], // Git ↔ Python
-          [9, 6], // Git ↔ Node.js
+          [8, 0],
+          [9, 3],
+          [9, 6],
           
-          // Cross-stack connections
-          [2, 3], // TypeScript ↔ Python
-          [7, 4], // Tailwind ↔ Django
+          [2, 3],
+          [7, 4],
         ].map(([startIdx, endIdx], i) => {
           const start = techNodes[startIdx];
           const end = techNodes[endIdx];
@@ -324,7 +313,6 @@ const AnimatedBackground = () => {
         })}
       </svg>
       
-      {/* Floating bubbles with GLOW - VERY VISIBLE */}
       {floatingBubbles.map((bubble) => (
         <motion.div
           key={bubble.id}
@@ -355,7 +343,6 @@ const AnimatedBackground = () => {
         />
       ))}
       
-      {/* Tech node labels - Subtle background elements */}
       {techNodes.map((node, i) => (
         <motion.div
           key={node.label}
@@ -386,7 +373,6 @@ const AnimatedBackground = () => {
         </motion.div>
       ))}
       
-      {/* Data flow particles - Subtle moving dots with trails */}
       {dataParticles.map((particle) => (
         <motion.div
           key={particle.id}
@@ -417,7 +403,6 @@ const AnimatedBackground = () => {
         />
       ))}
       
-      {/* Binary data stream - VISIBLE and dynamic */}
       {binaryStream.map((binary) => (
         <motion.div
           key={`binary-${binary.id}`}
@@ -446,7 +431,6 @@ const AnimatedBackground = () => {
         </motion.div>
       ))}
       
-      {/* Code snippets floating around - VISIBLE */}
       {[
         "npm run dev", "python manage.py", "git commit -m", "docker build -t",
         "SELECT * FROM", "useEffect(() => {", "async function", "const [state",
@@ -475,7 +459,6 @@ const AnimatedBackground = () => {
         </motion.div>
       ))}
       
-      {/* Circuit-like connections - VISIBLE diagonal lines */}
       {[...Array(12)].map((_, i) => (
         <motion.div
           key={`circuit-${i}`}
@@ -498,7 +481,6 @@ const AnimatedBackground = () => {
         />
       ))}
       
-      {/* Pulsing orbs at major tech nodes - VERY VISIBLE */}
       {techNodes.filter((_, i) => i % 2 === 0).map((node, i) => (
         <motion.div
           key={`node-pulse-${i}`}
@@ -524,7 +506,6 @@ const AnimatedBackground = () => {
         />
       ))}
       
-      {/* Pulsing orbs at grid intersections */}
       {gridPoints.filter((_, i) => i % 4 === 0).map((point, i) => (
         <motion.div
           key={`grid-pulse-${i}`}
@@ -550,7 +531,6 @@ const AnimatedBackground = () => {
         />
       ))}
       
-      {/* Scan lines effect - Visible tech feel */}
       <div className="absolute inset-0 opacity-8"
         style={{
           backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,0.15) 1px, rgba(255,255,255,0.15) 2px)',
@@ -558,7 +538,6 @@ const AnimatedBackground = () => {
         }}
       />
       
-      {/* Radial glow effects */}
       <motion.div
         className="absolute top-1/3 left-1/3 w-64 h-64 rounded-full blur-3xl"
         animate={{
@@ -595,7 +574,7 @@ const AnimatedBackground = () => {
     </div>
   );
 };
-// Add this CSS for triangle shape
+
 const triangleStyles = `
   .triangle-clip-path {
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -689,9 +668,7 @@ export default function Home() {
     <div ref={containerRef} className="relative min-h-screen">
       <AnimatedBackground />
       
-      {/* Hero Section - COMPACT */}
       <section className="relative flex items-center px-4 md:px-6 lg:px-8 pt-12 pb-8 z-10 min-h-[calc(90vh-4rem)]">
-        {/* Floating elements */}
         <FloatingElement 
           delay={0.5} 
           className="w-64 h-64 bg-primary/15 -top-10 -left-10" 
@@ -703,17 +680,15 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Left Content - MORE COMPACT */}
             <motion.div
               style={{ 
-                x: mousePosition.x * 0.3, // Reduced from 0.5
+                x: mousePosition.x * 0.3,
                 y: mousePosition.y * 0.3,
                 opacity: opacity || 1,
                 scale: scale || 1,
               }}
               className="space-y-6 relative z-20"
             >
-              {/* Badge - COMPACT */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -725,7 +700,6 @@ export default function Home() {
                 </span>
               </motion.div>
               
-              {/* Main headline - COMPACT */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -739,7 +713,6 @@ export default function Home() {
                 <span className="block">That Convert</span>
               </motion.h1>
               
-              {/* Description - COMPACT */}
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -750,7 +723,6 @@ export default function Home() {
                 premium, they deliver measurable business results.
               </motion.p>
               
-              {/* CTA Buttons - COMPACT */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -777,7 +749,6 @@ export default function Home() {
                 </Button>
               </motion.div>
               
-              {/* Trust indicators - COMPACT */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -799,10 +770,9 @@ export default function Home() {
               </motion.div>
             </motion.div>
             
-            {/* Right Content - Laptop Animation */}
             <motion.div
               style={{ 
-                x: -mousePosition.x * 0.2, // Reduced from 0.3
+                x: -mousePosition.x * 0.2,
                 y: -mousePosition.y * 0.2,
               }}
               className="relative z-10 mt-4 md:mt-0"
@@ -813,7 +783,6 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Tech Stack Section - CLOSER TO HERO */}
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -833,7 +802,6 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Features Section - COMPACT */}
       <section className="py-16 md:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -881,7 +849,6 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Final CTA - COMPACT */}
       <section className="py-16 md:py-20 px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

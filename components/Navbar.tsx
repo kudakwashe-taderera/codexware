@@ -53,7 +53,6 @@ export default function Navbar() {
               unoptimized
             />
           </Link>
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -78,7 +77,6 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg transition-colors"
@@ -93,11 +91,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -107,7 +103,6 @@ export default function Navbar() {
               className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40 md:hidden"
             />
             
-            {/* Mobile Menu Dropdown */}
             <motion.div
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}

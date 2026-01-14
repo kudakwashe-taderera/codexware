@@ -41,7 +41,7 @@ interface CookieType {
 
 export default function Cookies() {
   const [cookieSettings, setCookieSettings] = useState({
-    essential: true, // Always enabled
+    essential: true,
     analytics: false,
     functional: false,
     marketing: false,
@@ -110,7 +110,7 @@ export default function Cookies() {
   ];
 
   const toggleCookie = (id: string) => {
-    if (id === "essential") return; // Can't toggle essential cookies
+    if (id === "essential") return;
     
     setCookieSettings(prev => ({
       ...prev,
@@ -130,7 +130,7 @@ export default function Cookies() {
 
   const rejectAll = () => {
     setCookieSettings({
-      essential: true, // Always enabled
+      essential: true,
       analytics: false,
       functional: false,
       marketing: false,
@@ -139,7 +139,6 @@ export default function Cookies() {
   };
 
   const savePreferences = () => {
-    // In a real implementation, this would save to localStorage/backend
     console.log("Cookie preferences saved:", cookieSettings);
     setShowConsentManager(false);
   };
@@ -152,7 +151,6 @@ export default function Cookies() {
   };
 
   useEffect(() => {
-    // Load saved preferences on mount
     const saved = localStorage.getItem("cookiePreferences");
     if (saved) {
       try {
@@ -165,17 +163,14 @@ export default function Cookies() {
   }, []);
 
   useEffect(() => {
-    // Save preferences when they change
     localStorage.setItem("cookiePreferences", JSON.stringify(cookieSettings));
   }, [cookieSettings]);
 
   return (
     <div className="min-h-screen pt-20 relative overflow-hidden">
-      {/* Enhanced Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950" />
         
-        {/* Animated cookie particles */}
         {Array.from({ length: 15 }).map((_, i) => (
           <motion.div
             key={i}
@@ -199,7 +194,6 @@ export default function Cookies() {
           />
         ))}
         
-        {/* Tech grid */}
         <div className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `
@@ -249,7 +243,6 @@ export default function Cookies() {
             </div>
           </motion.div>
 
-          {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -287,7 +280,6 @@ export default function Cookies() {
             </div>
           </motion.div>
 
-          {/* Quick Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -312,7 +304,6 @@ export default function Cookies() {
             ))}
           </motion.div>
 
-          {/* Interactive Cookie Manager */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -457,7 +448,6 @@ export default function Cookies() {
             </div>
           </motion.div>
 
-          {/* Enhanced Content Sections */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -545,7 +535,6 @@ export default function Cookies() {
         </div>
       </Section>
 
-      {/* Cookie Consent Manager Modal */}
       <AnimatePresence>
         {showConsentManager && (
           <motion.div
@@ -661,7 +650,6 @@ export default function Cookies() {
         )}
       </AnimatePresence>
 
-      {/* Live Cookie Indicator */}
       <div className="fixed bottom-6 right-6 z-40">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -678,7 +666,6 @@ export default function Cookies() {
             </span>
           </button>
           
-          {/* Active cookie indicator */}
           <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}

@@ -19,9 +19,8 @@ const config: Config = {
           dark: "#FA7300",
           light: "#FEB600",
         },
-        background: "#000000", // Changed to black for premium dark theme
-        text: "#FFFFFF", // Changed to white
-        // Additional premium colors
+        background: "#000000",
+        text: "#FFFFFF",
         accent: {
           DEFAULT: "#8B5CF6",
           light: "#A78BFA",
@@ -39,14 +38,12 @@ const config: Config = {
         "soft-lg": "0 8px 40px rgba(11, 15, 23, 0.12)",
         glow: "0 0 30px rgba(1, 126, 222, 0.15)",
         "glow-orange": "0 0 30px rgba(245, 146, 0, 0.15)",
-        // Premium shadows
         "premium": "0 20px 60px rgba(0, 0, 0, 0.5)",
         "premium-glow": "0 0 80px rgba(1, 126, 222, 0.3)",
         "inner-glow": "inset 0 0 40px rgba(255, 255, 255, 0.05)",
         "neon": "0 0 40px rgba(1, 126, 222, 0.5), 0 0 80px rgba(245, 146, 0, 0.3)",
       },
       animation: {
-        // Smooth animations
         'float': 'float 6s ease-in-out infinite',
         'marquee': 'marquee 40s linear infinite',
         'marquee-fast': 'marquee 20s linear infinite',
@@ -120,20 +117,17 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'scale(1)' },
         },
       },
-      // Typography scale
       fontSize: {
         'xxs': '0.625rem',
         '10xl': '10rem',
         '11xl': '12rem',
       },
-      // Spacing
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
         '128': '32rem',
         '144': '36rem',
       },
-      // Z-index scale
       zIndex: {
         '60': '60',
         '70': '70',

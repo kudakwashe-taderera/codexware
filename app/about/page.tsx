@@ -44,7 +44,6 @@ const stats = [
 export default function About() {
   return (
     <div className="min-h-screen pt-20">
-      {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
         <Section className="py-24 px-6 relative">
@@ -95,7 +94,6 @@ export default function About() {
         </Section>
       </div>
 
-      {/* Founder Section */}
       <Section className="py-20 px-6 bg-gradient-to-b from-white/5 to-transparent">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -122,7 +120,6 @@ export default function About() {
               className="relative"
             >
               <div className="relative w-full max-w-lg mx-auto">
-                {/* Image Container */}
                 <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 z-10" />
                   <Image
@@ -135,7 +132,6 @@ export default function About() {
                   />
                 </div>
                 
-                {/* Decorative Elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl blur-xl opacity-30" />
                 <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-pink-500 to-orange-500 rounded-2xl blur-xl opacity-30" />
               </div>
@@ -225,7 +221,6 @@ export default function About() {
         </div>
       </Section>
 
-      {/* Our Story & Approach */}
       <Section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
@@ -301,7 +296,6 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Our Values */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -337,7 +331,6 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Mission Statement */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

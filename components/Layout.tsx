@@ -10,7 +10,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Add JSON-LD structured data for local business
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -42,13 +41,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       "priceRange": "$$"
     };
 
-    // Remove existing script if present
     const existingScript = document.getElementById('structured-data');
     if (existingScript) {
       existingScript.remove();
     }
 
-    // Add structured data script
     const script = document.createElement('script');
     script.id = 'structured-data';
     script.type = 'application/ld+json';

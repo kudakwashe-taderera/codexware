@@ -29,7 +29,6 @@ export default function Services() {
   const laptopScale = useTransform(scrollYProgress, [0, 0.3], [1, 0.9]);
   const laptopOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0.4]);
 
-  // Simplified services with floating bubble positions
   const services: Service[] = [
     {
       id: 1,
@@ -99,7 +98,6 @@ export default function Services() {
     },
   ];
 
-  // Detect mobile
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -111,16 +109,13 @@ export default function Services() {
 
   return (
     <div ref={containerRef} className="min-h-screen pt-16 relative overflow-x-hidden">
-      {/* Enhanced Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-black to-gray-950" />
         
-        {/* Animated gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-500" />
         
-        {/* Dynamic grid */}
         <div className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `
@@ -130,7 +125,6 @@ export default function Services() {
           }}
         />
         
-        {/* Floating particles */}
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
@@ -152,7 +146,6 @@ export default function Services() {
         ))}
       </div>
 
-      {/* Hero Section - Enhanced */}
       <section className="relative pt-20 pb-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -193,11 +186,9 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Orbital Services Section - Enhanced */}
       <section className="relative py-12 pb-32 md:pb-40 min-h-[700px] md:min-h-[1000px] flex items-center justify-center overflow-visible">
         <div className="relative w-full max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 md:gap-12">
-            {/* Left side - Laptop Display */}
             <motion.div
               style={{ 
                 scale: laptopScale,
@@ -206,19 +197,13 @@ export default function Services() {
               className="lg:w-2/5 flex justify-center"
             >
               <div className="relative w-full max-w-md">
-                {/* Laptop with enhanced styling */}
                 <div className="relative">
-                  {/* Glow effect */}
                   <div className="absolute -inset-4 bg-gradient-to-r from-orange-500/20 via-purple-500/20 to-cyan-500/20 blur-2xl rounded-3xl opacity-50" />
                   
-                  {/* Laptop Screen */}
                   <div className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl border border-gray-800 shadow-2xl overflow-hidden">
-                    {/* Screen gradient border */}
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-cyan-500/10 rounded-2xl" />
                     
-                    {/* Screen Content */}
                     <div className="relative p-6">
-                      {/* Screen Header */}
                       <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-3">
                           <div className="flex gap-2">
@@ -237,7 +222,6 @@ export default function Services() {
                         </div>
                       </div>
                       
-                      {/* Active Service Display */}
                       <div className="min-h-[280px] flex items-center justify-center">
                         <AnimatePresence mode="wait">
                           {hoveredService ? (
@@ -296,7 +280,6 @@ export default function Services() {
                     </div>
                   </div>
                   
-                  {/* Laptop Base */}
                   <div className="w-11/12 h-4 bg-gradient-to-b from-gray-900 to-black mx-auto -mt-1 rounded-b-xl border border-t-0 border-gray-800">
                     <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-orange-500/30 via-50% to-transparent" />
                   </div>
@@ -304,8 +287,6 @@ export default function Services() {
               </div>
             </motion.div>
 
-            {/* Right side - Floating Services (Desktop) / Grid (Mobile) */}
-            {/* Mobile: Grid Layout */}
             <div className="lg:hidden w-full">
               <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
                 {services.map((service, index) => (
@@ -339,7 +320,6 @@ export default function Services() {
               </div>
             </div>
 
-            {/* Desktop: Floating Bubbles */}
             <motion.div
               className="hidden lg:block lg:w-3/5 relative h-[600px] w-full flex items-center justify-center mx-auto overflow-visible"
             >
@@ -390,15 +370,11 @@ export default function Services() {
                       transform: 'translate(-50%, -50%)',
                     }}
                   >
-                    {/* Service Card with enhanced styling */}
                     <div className={`relative p-6 rounded-2xl backdrop-blur-xl border ${hoveredService === service.id ? 'border-white/30' : 'border-white/10'} shadow-2xl transition-all duration-500 group`}>
-                      {/* Card background gradient */}
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color}/5 opacity-60 group-hover:opacity-100 transition-opacity duration-500`} />
                       
-                      {/* Card border gradient */}
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
                       
-                      {/* Card content */}
                       <div className="relative">
                         <div className="flex items-start justify-between mb-4">
                           <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${service.color}/20 backdrop-blur-sm`}>
@@ -422,7 +398,6 @@ export default function Services() {
                           {service.description.split('.')[0]}.
                         </p>
                         
-                        {/* Progress indicator */}
                         <div className="flex items-center gap-2 text-xs text-gray-400">
                           <div className="flex-1 h-1 bg-gray-800 rounded-full overflow-hidden">
                             <motion.div
@@ -436,7 +411,6 @@ export default function Services() {
                         </div>
                       </div>
                       
-                      {/* Glowing orb indicator */}
                       <div className={`absolute -top-1 -right-1 w-2 h-2 rounded-full bg-${service.accentColor} blur-sm animate-pulse`} />
                     </div>
                   </motion.div>
@@ -447,7 +421,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Detailed Services Grid - Enhanced */}
       <section className="pt-40 pb-32 px-4 md:px-8 relative">
         <div className="max-w-7xl mx-auto relative">
           <motion.div
@@ -478,12 +451,10 @@ export default function Services() {
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className="group relative"
               >
-                {/* Card background effects */}
                 <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color}/5 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500`} />
                 <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                 
                 <div className="relative h-full p-8 rounded-3xl bg-gradient-to-b from-white/5 to-white/0 border border-white/10 backdrop-blur-sm group-hover:border-white/30 transition-all duration-500 overflow-hidden">
-                  {/* Corner accents */}
                   <div className={`absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl ${service.color}/20 rounded-tr-3xl rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                   <div className={`absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr ${service.color}/20 rounded-bl-3xl rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                   
@@ -533,7 +504,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
       <section className="py-32 px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -541,7 +511,6 @@ export default function Services() {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto text-center relative"
         >
-          {/* Background effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-purple-500/10 to-cyan-500/10 rounded-4xl blur-3xl" />
           <div className="absolute inset-0 backdrop-blur-xl border border-white/10 rounded-4xl" />
           
@@ -600,10 +569,9 @@ export default function Services() {
   );
 }
 
-// Enhanced helper function for service features
 function getServiceFeatures(serviceId: number): string[] {
   switch(serviceId) {
-    case 1: // API Development
+    case 1:
       return [
         "Python & Django REST Framework",
         "Node.js & Express Framework",
@@ -611,7 +579,7 @@ function getServiceFeatures(serviceId: number): string[] {
         "Authentication & Security Systems",
         "Performance & Scalability Optimization"
       ];
-    case 2: // UI/UX Design
+    case 2:
       return [
         "User Research & Usability Testing",
         "Wireframing & Interactive Prototyping",
@@ -619,7 +587,7 @@ function getServiceFeatures(serviceId: number): string[] {
         "Animation & Micro-interactions",
         "Accessibility & WCAG Compliance"
       ];
-    case 3: // Mobile Apps
+    case 3:
       return [
         "React Native & Flutter Development",
         "iOS & Android Native Applications",
@@ -627,7 +595,7 @@ function getServiceFeatures(serviceId: number): string[] {
         "Push Notifications & Analytics",
         "Offline Support & Data Sync"
       ];
-    case 4: // DevOps & Kubernetes
+    case 4:
       return [
         "Docker & Container Orchestration",
         "Kubernetes Cluster Management",
@@ -635,7 +603,7 @@ function getServiceFeatures(serviceId: number): string[] {
         "Cloud Infrastructure as Code",
         "Monitoring, Logging & Alerting"
       ];
-    case 5: // Consulting Services
+    case 5:
       return [
         "Technical Architecture Design",
         "Code Reviews & Security Audits",
@@ -643,7 +611,7 @@ function getServiceFeatures(serviceId: number): string[] {
         "Team Training & Mentoring",
         "Project Roadmap & Strategy"
       ];
-    case 6: // Web Development
+    case 6:
       return [
         "React, Next.js & TypeScript",
         "Python & Django Backend",

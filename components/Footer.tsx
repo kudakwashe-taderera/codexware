@@ -64,9 +64,7 @@ export default function Footer() {
       viewport={{ once: true }}
       className="relative overflow-hidden"
     >
-      {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950 to-black">
-        {/* Subtle grid */}
         <div className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `
@@ -77,20 +75,16 @@ export default function Footer() {
           }}
         />
         
-        {/* Glow effects */}
         <div className="absolute -top-32 left-1/4 w-64 h-64 bg-primary/10 blur-3xl rounded-full" />
         <div className="absolute -bottom-32 right-1/4 w-64 h-64 bg-secondary/10 blur-3xl rounded-full" />
       </div>
 
-      {/* Main content */}
       <motion.div 
         style={{ opacity, y }}
         className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24"
       >
         
-        {/* Main footer content */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
-          {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +111,6 @@ export default function Footer() {
               We transform complex challenges into elegant digital solutions that drive business growth and deliver exceptional user experiences.
             </p>
             
-            {/* Social Links */}
             <div className="flex items-center gap-3 pt-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -139,7 +132,6 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          {/* Services */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -172,7 +164,6 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Technologies */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -201,7 +192,6 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -255,7 +245,6 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        {/* Bottom bar */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -298,7 +287,6 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Back to top */}
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             whileHover={{ y: -3 }}
@@ -310,7 +298,6 @@ export default function Footer() {
         </motion.div>
       </motion.div>
 
-      {/* Floating particles */}
       {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}

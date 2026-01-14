@@ -159,11 +159,9 @@ export default function Privacy() {
 
   return (
     <div className="min-h-screen pt-20 relative overflow-hidden">
-      {/* Enhanced Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950" />
         
-        {/* Animated security patterns */}
         {Array.from({ length: 8 }).map((_, i) => (
           <motion.div
             key={i}
@@ -188,7 +186,6 @@ export default function Privacy() {
           />
         ))}
         
-        {/* Security grid overlay */}
         <div className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `
@@ -202,7 +199,6 @@ export default function Privacy() {
 
       <Section className="py-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Header with Actions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -240,7 +236,6 @@ export default function Privacy() {
             </div>
           </motion.div>
 
-          {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -278,7 +273,6 @@ export default function Privacy() {
             </div>
           </motion.div>
 
-          {/* Quick Privacy Controls */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -332,7 +326,6 @@ export default function Privacy() {
             </div>
           </motion.div>
 
-          {/* Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -359,7 +352,6 @@ export default function Privacy() {
             </div>
           </motion.div>
 
-          {/* Privacy Rights Cards */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -404,7 +396,6 @@ export default function Privacy() {
             </div>
           </motion.div>
 
-          {/* Main Policy Sections */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -451,7 +442,6 @@ export default function Privacy() {
                           )}
                         </AnimatePresence>
                         
-                        {/* Key Points */}
                         <div className="flex flex-wrap gap-2 mt-3">
                           {section.keyPoints.map((point, idx) => (
                             <span key={idx} className="px-2 py-1 text-xs rounded bg-white/5 text-white/60">
@@ -472,7 +462,6 @@ export default function Privacy() {
                   </div>
                 </button>
                 
-                {/* Expanded Content */}
                 <AnimatePresence>
                   {expandedSection === section.id && (
                     <motion.div
@@ -532,7 +521,6 @@ export default function Privacy() {
             ))}
           </motion.div>
 
-          {/* Compliance Dashboard */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -589,7 +577,6 @@ export default function Privacy() {
             </div>
           </motion.div>
 
-          {/* Contact & DPO Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -670,7 +657,6 @@ export default function Privacy() {
         </div>
       </Section>
 
-      {/* Privacy Request Form Modal */}
       <AnimatePresence>
         {showRequestForm && (
           <motion.div
@@ -747,7 +733,6 @@ export default function Privacy() {
                   </button>
                   <button
                     onClick={() => {
-                      // Handle submission
                       setShowRequestForm(false);
                     }}
                     className="flex-1 px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-lg hover:shadow-blue-500/25 transition-all"

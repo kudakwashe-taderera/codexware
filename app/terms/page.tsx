@@ -124,11 +124,9 @@ export default function Terms() {
 
   return (
     <div className="min-h-screen pt-20 relative overflow-hidden">
-      {/* Enhanced Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-black to-gray-950" />
         
-        {/* Animated legal document patterns */}
         {Array.from({ length: 12 }).map((_, i) => (
           <motion.div
             key={i}
@@ -151,7 +149,6 @@ export default function Terms() {
           />
         ))}
         
-        {/* Grid overlay */}
         <div className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `
@@ -165,7 +162,6 @@ export default function Terms() {
 
       <Section className="py-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Header with Actions */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -203,7 +199,6 @@ export default function Terms() {
             </div>
           </motion.div>
 
-          {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -241,7 +236,6 @@ export default function Terms() {
             </div>
           </motion.div>
 
-          {/* Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -268,7 +262,6 @@ export default function Terms() {
             </div>
           </motion.div>
 
-          {/* Quick Summary Toggle */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -318,7 +311,6 @@ export default function Terms() {
             </AnimatePresence>
           </motion.div>
 
-          {/* Main Terms Sections */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -350,7 +342,6 @@ export default function Terms() {
                           </span>
                         </div>
                         
-                        {/* Highlights */}
                         <div className="flex flex-wrap gap-2 mb-3">
                           {section.highlights.map((highlight, idx) => (
                             <span key={idx} className="px-2 py-1 text-xs rounded bg-white/5 text-white/60">
@@ -384,7 +375,6 @@ export default function Terms() {
                   </div>
                 </button>
                 
-                {/* Expanded Content */}
                 <AnimatePresence>
                   {expandedSection === section.id && (
                     <motion.div
@@ -435,7 +425,6 @@ export default function Terms() {
             ))}
           </motion.div>
 
-          {/* Legal Compliance Badges */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -461,7 +450,6 @@ export default function Terms() {
             </div>
           </motion.div>
 
-          {/* Contact Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -535,7 +523,6 @@ export default function Terms() {
             </div>
           </motion.div>
 
-          {/* Version History */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

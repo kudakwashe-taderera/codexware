@@ -51,12 +51,10 @@ export default function LaptopAnimation() {
     { text: "import { createPremiumExperience } from '@codexware/sdk'", type: 'keyword' },
     { text: "", type: 'comment' },
     { text: "const CodeXwareMasterpiece = () => {", type: 'function' },
-    { text: "  // State management for premium quality", type: 'comment' },
     { text: "  const [quality, setQuality] = useState('maximum')", type: 'variable' },
     { text: "  const [performance, setPerformance] = useState(100)", type: 'variable' },
     { text: "  const [clientSatisfaction, setClientSatisfaction] = useState('high')", type: 'variable' },
     { text: "", type: 'comment' },
-    { text: "  // Animation configurations", type: 'comment' },
     { text: "  const animations = {", type: 'variable' },
     { text: "    smooth: '0.6s cubic-bezier(0.16, 1, 0.3, 1)',", type: 'string' },
     { text: "    premium: {", type: 'variable' },
@@ -70,7 +68,6 @@ export default function LaptopAnimation() {
     { text: "    }", type: 'variable' },
     { text: "  }", type: 'variable' },
     { text: "", type: 'comment' },
-    { text: "  // Initialize all premium features", type: 'comment' },
     { text: "  useEffect(() => {", type: 'keyword' },
     { text: "    const initPremiumStack = async () => {", type: 'function' },
     { text: "      await loadThreeJSAnimations()", type: 'function' },
@@ -82,7 +79,6 @@ export default function LaptopAnimation() {
     { text: "    initPremiumStack()", type: 'function' },
     { text: "  }, [])", type: 'keyword' },
     { text: "", type: 'comment' },
-    { text: "  // Main render with premium components", type: 'comment' },
     { text: "  return (", type: 'keyword' },
     { text: "    <motion.div", type: 'keyword' },
     { text: "      initial={{ opacity: 0 }}", type: 'variable' },
@@ -100,12 +96,8 @@ export default function LaptopAnimation() {
     { text: "  )", type: 'keyword' },
     { text: "}", type: 'keyword' },
     { text: "", type: 'comment' },
-    { text: "// Export the masterpiece", type: 'comment' },
     { text: "export default CodeXwareMasterpiece", type: 'keyword' },
     { text: "", type: 'comment' },
-    { text: "// Crafted with precision by CodeXware Studio", type: 'comment' },
-    { text: "// Delivering digital experiences that convert", type: 'comment' },
-    { text: "// Transforming visions into reality since 2023", type: 'comment' },
   ];
 
   useEffect(() => {
@@ -147,7 +139,7 @@ export default function LaptopAnimation() {
     }, 80);
 
     return () => clearInterval(typingInterval);
-  }, [typingKey, typingRestarted]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [typingKey, typingRestarted]);
 
   useEffect(() => {
     if (codeContainerRef.current && autoScrollEnabled && activeCodeLines.length > 8) {
@@ -265,7 +257,7 @@ export default function LaptopAnimation() {
         autoScrollAnimationFrameRef.current = null;
       }
     };
-  }, [isTypingComplete, autoScrollEnabled]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isTypingComplete, autoScrollEnabled]);
 
   const getCodeColor = (type: CodeLine['type']) => {
     switch(type) {
@@ -474,7 +466,6 @@ export default function LaptopAnimation() {
                                 <span>✓ Masterpiece compiled by Kudash Twakkie</span>
                               </div>
                               <div className="text-gray-500 text-[10px] font-mono ml-5">
-                                {/* Crafted with precision on CodeXware Pro Studio */}
                               </div>
                             </motion.div>
                           )}

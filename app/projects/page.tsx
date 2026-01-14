@@ -7,7 +7,6 @@ import { FiShoppingCart, FiBookOpen, FiBriefcase, FiHome, FiUsers, FiLayers, FiG
 import Image from "next/image";
 import Link from "next/link";
 
-// Main Products
 const mainProducts = [
   {
     title: "Kart - Zimbabwean Super Marketplace",
@@ -53,7 +52,6 @@ const mainProducts = [
   }
 ];
 
-// Client Projects
 const clientProjects = [
   {
     title: "Gamue Wenyu - Artist Platform",
@@ -196,7 +194,6 @@ const clientProjects = [
   }
 ];
 
-// Companies we've worked with
 const companies = {
   zimbabwe: [
     { name: "Econet", industry: "Telecommunications", logo: "/econet.png" },
@@ -223,7 +220,6 @@ const companies = {
 export default function Projects() {
   return (
     <div className="min-h-screen pt-20">
-      {/* Main Products Section */}
       <Section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -307,7 +303,6 @@ export default function Projects() {
                         <div className="aspect-video rounded-xl bg-gradient-to-br from-gray-800 to-black overflow-hidden relative group">
                           {product.preview ? (
                             <>
-                              {/* Preview Image */}
                               <div className="absolute inset-0">
                                 <Image
                                   src={product.preview}
@@ -316,12 +311,9 @@ export default function Projects() {
                                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                                   unoptimized
                                 />
-                                {/* Subtle gradient overlay for blend */}
                                 <div className={`absolute inset-0 bg-gradient-to-br ${product.color}/5 via-transparent to-black/20`} />
-                                {/* Subtle border glow */}
                                 <div className={`absolute inset-0 rounded-xl border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.3)]`} />
                               </div>
-                              {/* Browser chrome */}
                               <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/40 to-transparent backdrop-blur-sm p-3 z-10">
                                 <div className="flex justify-between items-center">
                                   <div className="flex gap-2">
@@ -335,7 +327,6 @@ export default function Projects() {
                             </>
                           ) : (
                             <>
-                              {/* Mockup placeholder */}
                               <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="text-center">
                                   <div className={`inline-flex p-6 rounded-2xl bg-gradient-to-br ${product.color}/20 mb-4`}>
@@ -345,7 +336,6 @@ export default function Projects() {
                                   <p className="text-text/60">Platform Preview</p>
                                 </div>
                               </div>
-                              {/* Mockup UI elements */}
                               <div className="absolute top-4 left-4 right-4 flex justify-between">
                                 <div className="flex gap-2">
                                   <div className="w-2 h-2 rounded-full bg-red-500/50" />
@@ -382,7 +372,6 @@ export default function Projects() {
         </div>
       </Section>
 
-      {/* Client Projects Section */}
       <Section className="py-20 px-6 bg-gradient-to-b from-white/5 to-transparent">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -460,7 +449,6 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Confidential Projects */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -486,7 +474,6 @@ export default function Projects() {
         </div>
       </Section>
 
-      {/* Companies We&apos;ve Worked With */}
       <Section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -505,7 +492,6 @@ export default function Projects() {
           </motion.div>
 
           <div className="space-y-12">
-            {/* Zimbabwe Companies */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -539,7 +525,6 @@ export default function Projects() {
               </div>
             </motion.div>
 
-            {/* South Africa Companies */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -573,7 +558,6 @@ export default function Projects() {
               </div>
             </motion.div>
 
-            {/* Australia Companies */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -607,7 +591,6 @@ export default function Projects() {
               </div>
             </motion.div>
 
-            {/* USA Companies */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -644,7 +627,6 @@ export default function Projects() {
         </div>
       </Section>
 
-      {/* Call to Action */}
       <Section className="py-20 px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
