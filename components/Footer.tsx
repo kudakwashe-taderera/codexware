@@ -206,14 +206,37 @@ export default function Footer() {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <FiMail className="w-5 h-5 text-primary" />
                 </div>
-                <div>
-                  <p className="text-sm text-white/60">Email</p>
-                  <a 
-                    href="mailto:hello@codexware.com" 
-                    className="text-white hover:text-primary transition-colors"
-                  >
-                    hello@codexware.com
-                  </a>
+                <div className="flex-1">
+                  <p className="text-sm text-white/60 mb-2">Email</p>
+                  <div className="space-y-1.5">
+                    <div>
+                      <span className="text-xs text-white/50">Projects: </span>
+                      <a 
+                        href="mailto:projects@codexware.net" 
+                        className="text-white hover:text-primary transition-colors text-sm"
+                      >
+                        projects@codexware.net
+                      </a>
+                    </div>
+                    <div>
+                      <span className="text-xs text-white/50">Support: </span>
+                      <a 
+                        href="mailto:support@codexware.net" 
+                        className="text-white hover:text-primary transition-colors text-sm"
+                      >
+                        support@codexware.net
+                      </a>
+                    </div>
+                    <div>
+                      <span className="text-xs text-white/50">General: </span>
+                      <a 
+                        href="mailto:hello@codexware.net" 
+                        className="text-white hover:text-primary transition-colors text-sm"
+                      >
+                        hello@codexware.net
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               

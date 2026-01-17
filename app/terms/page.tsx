@@ -473,8 +473,8 @@ export default function Terms() {
                     </div>
                     <div>
                       <div className="text-sm text-white/60">Email</div>
-                      <a href="mailto:legal@codexware.com" className="text-white hover:text-blue-400 transition-colors">
-                        legal@codexware.com
+                      <a href="mailto:support@codexware.net" className="text-white hover:text-blue-400 transition-colors">
+                        support@codexware.net
                       </a>
                     </div>
                   </div>

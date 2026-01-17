@@ -599,8 +599,8 @@ export default function Privacy() {
                     </div>
                     <div>
                       <div className="text-sm text-white/60">DPO Email</div>
-                      <a href="mailto:dpo@codexware.com" className="text-white hover:text-blue-400 transition-colors">
-                        dpo@codexware.com
+                      <a href="mailto:support@codexware.net" className="text-white hover:text-blue-400 transition-colors">
+                        support@codexware.net
                       </a>
                     </div>
                   </div>
@@ -638,7 +638,7 @@ export default function Privacy() {
                       Report security incidents or data breaches immediately
                     </p>
                     <a
-                      href="mailto:security@codexware.com"
+                      href="mailto:support@codexware.net"
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 text-white hover:shadow-lg hover:shadow-red-500/25 transition-all text-sm"
                     >
                       <FiAlertCircle className="w-4 h-4" />

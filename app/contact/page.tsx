@@ -71,35 +71,35 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: <FiMail className="w-6 h-6" />,
-      title: "Email Address",
-      content: "hello@codexware.com",
-      subtitle: "For general inquiries",
+      title: "New Projects",
+      content: "projects@codexware.net",
+      subtitle: "For project inquiries",
       color: "from-blue-500 to-cyan-500",
-      action: "mailto:hello@codexware.com"
+      action: "mailto:projects@codexware.net"
+    },
+    {
+      icon: <FiMail className="w-6 h-6" />,
+      title: "Support",
+      content: "support@codexware.net",
+      subtitle: "Technical support & assistance",
+      color: "from-purple-500 to-pink-500",
+      action: "mailto:support@codexware.net"
+    },
+    {
+      icon: <FiMail className="w-6 h-6" />,
+      title: "General Inquiries",
+      content: "hello@codexware.net",
+      subtitle: "General questions & information",
+      color: "from-green-500 to-emerald-500",
+      action: "mailto:hello@codexware.net"
     },
     {
       icon: <FiPhone className="w-6 h-6" />,
       title: "Phone Support",
       content: "+1 (447) 902-5849",
       subtitle: "Mon-Fri, 9AM-6PM EST",
-      color: "from-purple-500 to-pink-500",
-      action: "tel:+14479025849"
-    },
-    {
-      icon: <FiClock className="w-6 h-6" />,
-      title: "Response Time",
-      content: "< 2 Hours",
-      subtitle: "Priority client response",
-      color: "from-green-500 to-emerald-500",
-      action: null
-    },
-    {
-      icon: <FiGlobe className="w-6 h-6" />,
-      title: "Global Reach",
-      content: "24/7 Available",
-      subtitle: "Worldwide remote support",
       color: "from-orange-500 to-red-500",
-      action: null
+      action: "tel:+14479025849"
     }
   ];
 

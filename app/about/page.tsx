@@ -3,7 +3,7 @@
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import { motion } from "framer-motion";
-import { FiAward, FiGlobe, FiShield, FiCode, FiLinkedin, FiGithub, FiExternalLink, FiMapPin, FiCalendar, FiBriefcase } from "react-icons/fi";
+import { FiAward, FiGlobe, FiShield, FiCode, FiLinkedin, FiGithub, FiExternalLink, FiMapPin, FiCalendar, FiBriefcase, FiMail } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -213,6 +213,18 @@ export default function About() {
                       <FiGithub className="w-4 h-4 text-text/80" />
                       <span className="text-text/80 group-hover:text-text">GitHub</span>
                     </Link>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <p className="text-text/70 mb-2">
+                      Want to reach the founder directly?
+                    </p>
+                    <a
+                      href="mailto:kudakwashe@codexware.net"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+                    >
+                      <FiMail className="w-4 h-4" />
+                      kudakwashe@codexware.net
+                    </a>
                   </div>
                 </div>
               </div>
